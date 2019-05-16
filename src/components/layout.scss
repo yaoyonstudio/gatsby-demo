@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7,6 +13,10 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 article,
 aside,
@@ -615,6 +625,21 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+.layout-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  a {
+    color: #a870e0;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
