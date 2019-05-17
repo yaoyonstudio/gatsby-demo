@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,19 +14,57 @@ const Posts = () => {
           edges {
             node {
               id
+              wordpress_id
               title
               excerpt
               date
-              datestr
-              authorName
-              commentNums
+              slug
+              status
+              type
               link
-              thumbnailurl
-              featuredimgurl
+              sticky
+              format
+              featured_media {
+                source_url
+              }
+              author {
+                id
+                wordpress_id
+                name
+                url
+                avatar_urls {
+                  wordpress_48
+                }
+              }
+              tags {
+                id
+                wordpress_id
+                name
+                slug
+                link
+                taxonomy {
+                  id
+                }
+              }
+              categories {
+                id
+                name
+                slug
+                taxonomy {
+                  id
+                  wordpress_id
+                  name
+                  slug
+                  description
+                }
+                link
+                description
+                count
+              }
             }
           }
         }
-      }
+      }      
     `
   )
 

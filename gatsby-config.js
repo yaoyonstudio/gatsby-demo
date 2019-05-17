@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "www.thatyou.cn",
-        protocol: "https",
+        baseUrl: "www.wptest.mysite",
+        protocol: "http",
         hostingWPCOM: false,
         useACF: false,
         acfOptionPageIds: [],
@@ -56,7 +56,10 @@ module.exports = {
           "**/categories",
           "**/posts",
           "**/pages",
+          "**/media",
           "**/tags",
+          "**/taxonomies",
+          "**/users",
         ],
         // Blacklisted routes using glob patterns
         excludedRoutes: ["**/posts/1456"],
@@ -71,6 +74,28 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+        ],
       },
     },
     `gatsby-transformer-sharp`,

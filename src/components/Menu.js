@@ -11,8 +11,8 @@ const Menu = () => {
 
   const Nav = styled.nav`
     width: 100%;
-    height: 3rem;
-    margin-bottom: 1.45rem;
+    height: .5rem;
+    margin-bottom: .12rem;
     background-color: #a870e0;
     * {
       margin: 0;
@@ -37,11 +37,11 @@ const Menu = () => {
       color: #fff;
       display: block;
       width: 100%;
-      line-height: 3rem;
+      line-height: .5rem;
       text-decoration: none;
-      padding: 0 1rem;
+      padding: 0 .1rem;
       position: relative;
-      font-size: 1rem;
+      font-size: .18rem;
     }
     .active {
       color: #663399;
@@ -50,24 +50,24 @@ const Menu = () => {
         display: block;
         width: 0;
         height: 0;
-        border-width: .6rem .6rem 0;
+        border-width: .1rem .1rem 0;
         border-style: solid;
         border-color: #663399 transparent transparent;
         position: absolute;
-        top: -.1rem;
+        top: -.01rem;
         left: 50%;
-        margin-left: -.6rem;
+        margin-left: -.1rem;
       }
       &::after {
         content: '';
         display: block;
         width: 30%;
-        height: .2rem;
+        height: .03rem;
         background-color: #663399;
         position: absolute;
         left: 50%;
         margin-left: -15%;
-        bottom: .2rem;
+        bottom: .04rem;
       }
     }
   `
